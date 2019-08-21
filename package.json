@@ -1,0 +1,16 @@
+{
+  "name": "s3WriterForQuietLogistics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chris.snelson@celigo.com",
+  "license": "ISC",
+  "dependencies": {
+    "lambda-integrator-extension": "^0.1.4",
+    "bluebird": "2.9.34",
+    "aws-sdk": "2.2.15"
+  }
+}

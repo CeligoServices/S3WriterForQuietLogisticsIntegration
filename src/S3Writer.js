@@ -44,6 +44,7 @@ module.exports = function S3Writer(AWS) {
 		};
 		var awsAccessKey = options.connection.unencrypted.awsAccessKey;
 		var secretAccessKey = options.connection.encrypted.secretAccessKey;
+		var region = options.connection.unencrypted.region || 'us-east-1';
 
 		options.documentName = params.Key;
 
@@ -52,7 +53,8 @@ module.exports = function S3Writer(AWS) {
 			console.log('S3 params: ', JSON.stringify(params));
 		}
 		var s3 = new AWS.S3({
-			credentials : new AWS.Credentials(awsAccessKey, secretAccessKey)
+			credentials : new AWS.Credentials(awsAccessKey, secretAccessKey),
+			region : region
 		});
 
 		return new Promise(function(fulfill, reject) {

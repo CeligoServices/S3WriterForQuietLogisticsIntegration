@@ -11,6 +11,6 @@
   "dependencies": {
     "lambda-integrator-extension": "^0.1.4",
     "bluebird": "2.9.34",
-    "aws-sdk": "2.2.15"
+    "aws-sdk": "2.1354.0"
   }
 }
